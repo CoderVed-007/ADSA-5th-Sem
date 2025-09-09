@@ -1,9 +1,32 @@
-You are given an array A of size N and an element X. Your task is to find whether the array A contains the element X or not.
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
-Input Format
-The first line contains two space-separated integers N and X — the size of array and the element to be searched.
-The second line contains all the elements of array A.
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int X = sc.nextInt();
+		int[] A = new int[N];
+		
+		for(int i = 0; i < N; i++){
+		    A[i] = sc.nextInt();
+		}
+		boolean found = false;
+		for(int i = 0; i < N; i++){
+		    if(A[i] == X){
+		        found = true;
+		        break;
+		    }
+		}
+		if(found){
+		    System.out.println("YES");
+		}else{
+		    System.out.println("NO");
+		}
+	}
+}
 
-Output Format
-Output "YES" if the element X is present in A, otherwise output "NO".
 
